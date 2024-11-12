@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Check for git installation
+if ! command -v git &>/dev/null; then
+    echo "Git is not installed. Please install Git and rerun the script."
+    exit 1
+fi
+
+read -p "Enter your Git username: " username
+read -p "Enter your Git email: " email
+
+git config --global user.name "$username"
+git config --global user.email "$email"
+
 # Display message about the aliases being added
 echo "Adding the following Git aliases:"
 echo "co         : checkout"
