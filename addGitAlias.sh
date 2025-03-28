@@ -45,3 +45,8 @@ git config --global alias.rss "restore --staged"
 git config --global alias.listconfig "config --list"
 
 echo "Git aliases have been successfully added!"
+
+# Make bash case-insensitive for to current user
+# Terminal restart needed
+echo set completion-ignore-case on | sudo tee -a /etc/inputrc
+
